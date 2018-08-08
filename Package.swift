@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Prorsum",
     products: [
-        .executable(name: "prorsum-performance", targets: ["Performance"]),
+        .executable(name: "prorsum-performance", targets: ["Perf"]),
         .library(name: "Prorsum", targets: ["Prorsum"])
     ],
     dependencies: [
@@ -13,7 +13,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "Prorsum", dependencies: ["CHTTPParser", "ProrsumNet"]),
-        .target(name: "Performance", dependencies: ["Prorsum"]),
+        .target(name: "Perf", dependencies: ["Prorsum"]),
         .testTarget(name: "ProrsumTests", dependencies: ["Prorsum"])
     ]
 )
